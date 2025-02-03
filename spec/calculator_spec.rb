@@ -7,5 +7,11 @@ describe do
       added_value = add("")
       expect(added_value).to eq(0)
     end
+
+    it "returns 0 if argument not passed" do
+      added_value = add
+      expect(added_value).to eq(0)
+    end
+
   end
 end
