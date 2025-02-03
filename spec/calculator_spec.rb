@@ -28,5 +28,9 @@ describe do
       expect(added_value).to eq(0)
     end
 
+    it "returns Argument error if input string contains non integer values to sum" do
+      expect{add("1,b")}.to raise_error(ArgumentError)
+    end
+
   end
 end
