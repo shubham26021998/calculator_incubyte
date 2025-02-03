@@ -57,6 +57,10 @@ describe do
       added_value = add("1\n2,3")
       expect(added_value).to eq(6)
     end
+
+    it "raises ArgumentError is input has both delimeters side by side" do 
+      expect{add("1,\n")}.to raise_error(ArgumentError)
+    end
   end
 
 end
