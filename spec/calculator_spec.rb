@@ -72,4 +72,11 @@ describe do
 
   end
 
+  context "Support different delimiters" do
+    it "allows delimeter to be given in input string" do
+      added_value = add("//;\n1;2")
+      expect(added_value).to eq(3)
+    end
+  end
+
 end
