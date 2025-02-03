@@ -32,5 +32,17 @@ describe do
       expect{add("1,b")}.to raise_error(ArgumentError)
     end
 
+    it "returns Argument error if input string contains only one non integer values to sum" do
+      expect{add("b")}.to raise_error(ArgumentError)
+    end
+
+    it "returns Argument error if input string contains special characters to sum" do
+      expect{add("1,$")}.to raise_error(ArgumentError)
+    end
+
+    it "returns Argument error if input string contains only one special characters to sum" do
+      expect{add("$")}.to raise_error(ArgumentError)
+    end
+
   end
 end
