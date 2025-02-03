@@ -83,4 +83,10 @@ describe do
     end
   end
 
+  context "Negetive numbers in input string should return input" do
+    it "raises Argument error if custom delimeter is present together" do
+      expect{add("//;\n1;-2;-3")}.to raise_error(ArgumentError, "Negatives not allowed: -2, -3")
+    end
+  end
+
 end
