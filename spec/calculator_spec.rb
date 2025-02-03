@@ -2,7 +2,7 @@ require 'spec_helper'
 require './calculator'
 
 describe do
-  context "Add the values given in string" do
+  context "Add the values given in string with , as delimeter and maximum of 2 numbers to sum" do
     it "returns 0 for an empty string" do
       added_value = add("")
       expect(added_value).to eq(0)
@@ -43,6 +43,13 @@ describe do
     it "returns Argument error if input string contains only one special characters to sum" do
       expect{add("$")}.to raise_error(ArgumentError)
     end
-
   end
+
+  context "Add the values given in string with , as delimeter and any numbers of integers to sum" do
+    it "returns correct sum if input string has more than 2 integers" do
+      added_value = add("1,2,3")
+      expect(added_value).to eq(6)
+    end
+  end
+
 end
