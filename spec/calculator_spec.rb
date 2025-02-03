@@ -18,5 +18,10 @@ describe do
       expect(added_value).to eq(12)
     end
 
+    it "returns sum if input string contains 2 numbers with , as delimeter" do
+      added_value = add("12,13")
+      expect(added_value).to eq(25)
+    end
+
   end
 end
