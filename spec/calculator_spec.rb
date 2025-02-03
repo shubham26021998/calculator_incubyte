@@ -61,6 +61,15 @@ describe do
     it "raises ArgumentError is input has both delimeters side by side" do 
       expect{add("1,\n")}.to raise_error(ArgumentError)
     end
+
+    it "raises ArgumentError is input has , delimeters side by side" do 
+      expect{add("1,,1")}.to raise_error(ArgumentError)
+    end
+
+    it "raises ArgumentError is input has \n delimeters side by side" do 
+      expect{add("1\n\n1")}.to raise_error(ArgumentError)
+    end
+
   end
 
 end
