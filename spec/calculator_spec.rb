@@ -23,5 +23,10 @@ describe do
       expect(added_value).to eq(25)
     end
 
+    it "returns 0 if input string is nil" do
+      added_value = add(nil)
+      expect(added_value).to eq(0)
+    end
+
   end
 end
