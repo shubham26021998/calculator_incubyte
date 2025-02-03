@@ -13,5 +13,10 @@ describe do
       expect(added_value).to eq(0)
     end
 
+    it "returns single value if input string does not contain , delimeter" do
+      added_value = add("12")
+      expect(added_value).to eq(12)
+    end
+
   end
 end
