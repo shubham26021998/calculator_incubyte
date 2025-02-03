@@ -77,6 +77,10 @@ describe do
       added_value = add("//;\n1;2")
       expect(added_value).to eq(3)
     end
+
+    it "raises Argument error if custom delimeter is present together" do
+      expect{add("//;\n1;;2")}.to raise_error(ArgumentError)
+    end
   end
 
 end
